@@ -26,6 +26,12 @@ class BoardView(AbstractView):
             draw.line(self.screen, WHITE, (0, pos), (self.screen.get_width(), pos), SIZE_LINE)
         display.update()
 
+    def alive_cell(self, x, y):
+        pass
+
+    def kill_cell(self, x, y):
+        pass
+
     def update(self):
         pass
 

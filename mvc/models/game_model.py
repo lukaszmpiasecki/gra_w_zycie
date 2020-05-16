@@ -1,7 +1,10 @@
 from mvc.models.abstract_model import AbstractModel
 
 
-class PopulationModel(AbstractModel):
+class GameModel(AbstractModel):
+
+    def __init__(self):
+        super.__init__()
 
 
     def modify(self):
