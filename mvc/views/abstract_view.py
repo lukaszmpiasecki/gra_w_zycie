@@ -1,4 +1,12 @@
 from abc import ABC, abstractmethod
 
+
 class AbstractView(ABC):
-    pass
+
+    @abstractmethod
+    def update(self):
+        pass
+
+    @abstractmethod
+    def show(self):
+        pass
