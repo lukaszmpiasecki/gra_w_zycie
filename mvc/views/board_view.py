@@ -37,11 +37,11 @@ class BoardView(AbstractView):
             for j in range(7):
                 if matrix[i][j] == 0:
                     draw.rect(self.screen, WHITE, (10 + i*110, 10 + j*110, 90, 90))
-                    time.Clock().tick(10)
+                    time.Clock().tick(40)
                     display.flip()
                 else:
                     draw.rect(self.screen, BLACK, (10 + i*110, 10 + j*110, 90, 90))
-                    time.Clock().tick(10)
+                    time.Clock().tick(40)
                     display.flip()
 
     def show(self):

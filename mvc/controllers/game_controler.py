@@ -9,8 +9,10 @@ class GameController(AbstractController):
     def get_user_interaction(self):
         for ev in event.get():
             if ev.type == QUIT:
-                return False
+                quit()
+                exit()
             else:
+                self.model.modify()
                 return True
 
 

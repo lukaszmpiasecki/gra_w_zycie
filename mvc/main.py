@@ -8,8 +8,8 @@ def main():
     view = BoardView('View', model)
     model.add_observer(view)
     controller = GameController(model, view)
-    while controller.get_user_interaction():
-        controller.model.modify()
+    while True:
+        controller.get_user_interaction()
 
 
 if '__main__' == __name__:
