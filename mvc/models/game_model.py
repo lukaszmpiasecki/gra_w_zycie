@@ -12,6 +12,7 @@ class GameModel(AbstractModel):
             for j in range(7):
                 self._cell_matrix[i][j] = randint(0, 1)
 
+    # Obliczam kto ilu ma sasiadow i wyznaczam populacje na nastepny ruch
     def modify(self):
         GameModel.count_neighbour(self)
         for i in range(7):
@@ -21,11 +22,10 @@ class GameModel(AbstractModel):
                 elif self._neighbour_matrix[i][j] == 3:
                     self._cell_matrix[i][j] = 1
         self.notify()
-        #print("Modyfikuje !!!")
 
     def notify(self):
         for obs in self._obs_list.values():
-            obs.update()
+            obs.update(self._cell_matrix)
 
 
     def count_neighbour(self):
