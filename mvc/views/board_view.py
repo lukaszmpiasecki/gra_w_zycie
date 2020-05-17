@@ -10,7 +10,10 @@ WHITE = (255, 255, 255)
 
 class BoardView(AbstractView):
 
-    def __init__(self):
+    def __init__(self, name, model):
+        super().__init__(name, model)
+        self.name = name
+        self.model = model
         rows = 80
         cols = 80
         x = 770
@@ -36,4 +39,4 @@ class BoardView(AbstractView):
         pass
 
     def show(self):
-        pass
+        self.model.notify()
