@@ -1,5 +1,5 @@
 from mvc.views.abstract_view import AbstractView
-from pygame import init as game_init, display, draw
+from pygame import init as game_init, display, draw, event, time
 
 SIZE_CELL = 10
 SIZE_LINE = 1
@@ -32,13 +32,17 @@ class BoardView(AbstractView):
         display.update()
 
     def update(self, matrix):
+        #event.get()
         for i in range(7):
             for j in range(7):
                 if matrix[i][j] == 0:
                     draw.rect(self.screen, WHITE, (10 + i*110, 10 + j*110, 90, 90))
-                    display.update()
+                    time.Clock().tick(10)
+                    display.flip()
                 else:
                     draw.rect(self.screen, BLACK, (10 + i*110, 10 + j*110, 90, 90))
+                    time.Clock().tick(10)
+                    display.flip()
 
     def show(self):
         self.model.notify()
