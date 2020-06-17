@@ -1,4 +1,4 @@
-from mvc.controllers.abstract_controller import AbstractController
+from controllers.abstract_controller import AbstractController
 from pygame import QUIT, quit, event
 
 class GameController(AbstractController):

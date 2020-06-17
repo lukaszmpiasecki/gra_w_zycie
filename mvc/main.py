@@ -1,6 +1,6 @@
-from mvc.views.board_view import BoardView
-from mvc.controllers.game_controler import GameController
-from mvc.models.game_model import GameModel
+from views.board_view import BoardView
+from controllers.game_controler import GameController
+from models.game_model import GameModel
 
 
 def main():

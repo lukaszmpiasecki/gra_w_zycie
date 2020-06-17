@@ -1,4 +1,4 @@
-from mvc.views.abstract_view import AbstractView
+from views.abstract_view import AbstractView
 from pygame import init as game_init, display, draw, event, time
 
 SIZE_CELL = 10
